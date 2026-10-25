@@ -162,3 +162,8 @@ fieldset {
   outline-color: #9fc0e0;
   outline-offset: 1px;
 }
+.account-info input:user-invalid,
+.account-info select:user-invalid {
+  border-color: #d93025;
+  background-color: #fff5f5;
+}
