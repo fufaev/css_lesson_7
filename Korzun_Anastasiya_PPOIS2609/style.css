@@ -248,3 +248,91 @@ fieldset {
   text-align: center;
   color: #b5b9c3;
 }
+/*----Планшеты: до 768px----*/
+@media (max-width: 768px) {
+  header {
+    padding-top: 24px;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+
+  .c1 h2 {
+    margin-top: 24px;
+    font-size: 1.3rem;
+  }
+
+  .c1 .intro {
+    margin-top: 20px;
+    font-size: 1.15rem;
+  }
+}
+
+/* ---------- Смартфоны: до 480px ---------- */
+@media (max-width: 480px) {
+  header,
+  main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  .c1 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .c1 h2 {
+    margin-top: 20px;
+    font-size: 1.15rem;
+  }
+  .c1 .intro {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  /* Внешняя рамка формы на телефоне не нужна — остаются рамки fieldset */
+  form {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-style: none;
+  }
+  .account-info {
+    padding-top: 24px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .account-info legend {
+    margin-left: -8px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 1rem;
+  }
+  .account-info label {
+    font-size: 1rem;
+  }
+
+  /* 16px в полях — iOS не увеличивает страницу при фокусе */
+  .account-info input,
+  .account-info select {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 1rem;
+  }
+  .account-action {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .check {
+    font-size: 0.8rem;
+  }
+  .btn {
+    font-size: 1.05rem;
+  }
+  .foot {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
