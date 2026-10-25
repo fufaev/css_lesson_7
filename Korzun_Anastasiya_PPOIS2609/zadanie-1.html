@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Использование веб-форм на сайте</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&amp;display=swap">
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+  <header>
+    <h1>Форма регистрации на сайте</h1>
+    <!--
+     <nav>
+       <a href="#" title="На главную">На главную</a>
+     </nav>
+    -->
+  </header>
+  <main>
+    <article class="c1">
+      <h2>Добро пожаловать на наш сайт!</h2>
+      <p class="intro">Для регистрации введите свои данные:</p>
+      <form action="/signup" method="POST">
+        <fieldset class="account-info">
+          <legend>Регистрационные данные</legend>
+
+          <label for="first-name">Имя</label>
+          <input type="text" id="first-name" name="first_name" autocomplete="given-name"
+            placeholder="Иван" required>
+
+          <label for="last-name">Фамилия</label>
+          <input type="text" id="last-name" name="last_name" autocomplete="family-name"
+            placeholder="Иванов" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="email notnull" autocomplete="email"
+            placeholder="example@mail.by" required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            title="Адрес вида name@mail.by">
+
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" class="notnull" autocomplete="tel"
+            placeholder="+375 (код оператора) 111-11-11" required
+            pattern="\+375\s?\(?(25|29|33|44)\)?\s?\d{3}-?\d{2}-?\d{2}"
+            title="Номер вида +375 (29) 111-11-11">
+
+          <label for="country">Страна</label>
+          <select id="country" name="country" autocomplete="country-name">
+            <option selected>Беларусь</option>
+            <option>Россия</option>
+            <option>Украина</option>
+            <option>Польша</option>
+            <option>Литва</option>
+            <option>Латвия</option>
+            <option>Эстония</option>
+            <option>США</option>
+          </select>
+
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" autocomplete="new-password"
+            placeholder="Мин. 8 символов" minlength="8" required>
+
+          <label for="password-confirm">Подтвердите пароль</label>
+          <input type="password" id="password-confirm" name="password_confirm" autocomplete="new-password"
+            placeholder="Повторите пароль" minlength="8" required>
+        </fieldset>
+
+        <fieldset class="account-action">
+          <legend class="visually-hidden">Согласие и отправка</legend>
+
+          <p class="check">
+            <input type="checkbox" id="agree-rules" name="agree_rules" required>
+            <label for="agree-rules">Отметьте для подтверждения согласия с <a
+                href="/подключение/правила-использования-услуги" target="_blank" rel="noopener">правилами
+                использования услуги</a></label>
+          </p>
+          <p class="check">
+            <input type="checkbox" id="agree-personal-data" name="agree_personal_data" required>
+            <label for="agree-personal-data">Отметьте для согласия на обработку персональных данных в
+              соответствии с <a href="/соглашение-об-обработке-персональных-данных" target="_blank"
+                rel="noopener">Соглашением об обработке персональных данных</a></label>
+          </p>
+
+          <button class="btn" type="submit" name="submit">Зарегистрироваться</button>
+        </fieldset>
+      </form>
+    </article>
+    <!--<aside>
+      Тут могла быть ваша реклама
+    </aside>-->
+  </main>
+  <footer class="foot">
+    &#169; 2026, Официальный сайт Корзун Анастасии
+  </footer>
+</body>
+</html>
+
