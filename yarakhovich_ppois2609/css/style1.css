@@ -1,0 +1,269 @@
+body {
+  max-width: 450px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  font-stretch: condensed;
+  font-weight: 700;
+  transform: scaleX(1);
+  letter-spacing: 0.4px;
+  transform-origin: center;
+  color: black;
+  -webkit-text-stroke: 0.4px black;
+  padding-top: 37px;
+}
+
+h2 {
+  font-size: 23px;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+.c1 {
+  padding-top: 28px;
+}
+
+.c1 h2 {
+  margin-bottom: 24px;
+}
+
+.c1 p {
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 11px;
+}
+
+.c1 form {
+  border: 1px #c6c7cc solid;
+  padding: 12px 10px 0 11px;
+  border-radius: 5px;
+  color: #395870;
+}
+
+.account-info {
+  border-left: 1px solid #c0cad5;
+  border-right: 1px solid #c0cad5;
+  border-bottom: 1px solid #c0cad5;
+  border-top: 1px solid #c0cad5;
+  border-top-right-radius: 5px;
+  display: grid;
+  padding-left: 26px;
+  padding-right: 25px;
+}
+
+.account-info legend {
+  font-size: 18px;
+  letter-spacing: 0.4px;
+  padding-left: 12px;
+  margin-left: -26px;
+  padding-right: 12px;
+  margin-bottom: 30px;
+}
+
+.account-info label {
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+}
+
+.account-info input {
+  border-radius: 5px;
+  padding-right: 9px;
+  padding-left: 9px;
+  font-size: 18px;
+  border: 1px solid #c0cad5;
+  display: inline-block;
+  box-sizing: border-box;
+  letter-spacing: -0.2px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.07);
+  color: #757575;
+}
+
+/* Если что-то ввели и оно валидно (зелёная рамка) */
+.account-info input:not(:placeholder-shown):user-valid {
+  border-color: #12b013;
+  border-width: 2px;
+}
+
+/* Если что-то ввели и оно НЕвалидно (красная рамка) */
+.account-info input:not(:placeholder-shown):user-invalid {
+  border-color: red;
+  border-width: 2px;
+}
+
+#first_name {
+  height: 42px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  margin-bottom: 17px;
+}
+
+#last_name {
+  height: 43px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 17px;
+}
+
+#email {
+  height: 43px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 16px;
+}
+
+#phone {
+  height: 43px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 16px;
+}
+
+.account-info input:last-child {
+  margin-bottom: 8px;
+}
+
+.account-info select {
+  height: 43px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #c0cad5;
+  /* Для Safari и старых версий Chrome */
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 18px;
+  margin-bottom: 16px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.07);
+  color: #757575;
+}
+
+#password {
+  height: 43px;
+  box-sizing: border-box;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+#password_confirm {
+  height: 43px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.account-action {
+  border-top: 0 solid #c0cad5;
+  border-bottom: 1px solid #c0cad5;
+  border-left: 1px solid #c0cad5;
+  border-right: 1px solid #c0cad5;
+  max-width: 100%;
+  background-color: #f0f0f2;
+  display: grid;
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-left: 30px;
+  padding-right: 25px;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.account-action label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  /* Прячем пробел */
+  text-indent: -4px;
+  line-height: 1.4;
+  color: #444444;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  line-height: 1.3;
+}
+
+.account-action label input[type="checkbox"] {
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.account-action label a {
+  color: #0044cc;
+  text-decoration: underline;
+  display: inline;
+}
+
+.account-action label:last-of-type {
+  margin-bottom: 19px;
+}
+
+.btn {
+  height: 41px;
+  box-sizing: border-box;
+  display: block;
+  padding: 7px 25px 7px 25px;
+  border-radius: 5px;
+  border-width: 0px;
+  background: linear-gradient(to bottom, #43658a 0%, #2c435c 100%);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  max-width: 230px;
+  justify-self: center;
+  transform: translateX(-3px);
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #729dcc 0%, #24568b 100%);
+}
+
+.foot {
+  color: #c7cbdb;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 20px;
+}
+
+/* МОБИЛЬНЫЕ УСТРОЙСТВА */
+@media (max-width: 479px) {
+  h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .c1 p {
+    font-size: 16px;
+  }
+
+  .c1 form {
+    border: 0 #c6c7cc solid;
+  }
+}

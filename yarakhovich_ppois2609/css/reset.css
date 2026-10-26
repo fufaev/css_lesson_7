@@ -1,0 +1,83 @@
+/* 1. Изменяемbox-sizing для всех элементов, чтобы границы и паддинги учитывались в ширине */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Убираем внешние и внутренние отступы у списка самых популярных тегов */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Убираем маркеры у списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Настраиваем базовое поведение для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* 5. Упрощаем работу с изображениями */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* 6. Наследуем шрифты для инпутов и кнопок, убираем дефолтные рамки */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Убираем стандартное подчеркивание у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8. Делаем курсор указателем для кнопок */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* 9. Удаляем все анимации для пользователей, которые их отключили в ОС */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

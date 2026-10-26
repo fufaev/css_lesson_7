@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Использование веб-форм на сайте</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+  <header>
+    <h1>Форма регистрации на сайте</h1>
+    <!--
+     <nav>
+       <a href="#" title="На главную">На главную</a>
+     </nav>
+    -->
+  </header>
+  <main>
+    <article class="c1">
+      <h2>Добро пожаловать на наш сайт!</h2>
+      <p>Для регистрации введите свои данные:</p>
+      <form action="/signup" method="POST">
+        <fieldset class="account-info">
+          <legend>Регистрационные данные</legend>
+          <label for="first_name">Имя</label>
+          <input id="first_name" type="text" name="first_name" placeholder="Иван">
+          <label for="last_name">Фамилия</label>
+          <input id="last_name" type="text" name="last_name" placeholder="Иванов">
+          <label for="email">Email</label>
+          <input id="email" type="email" required class="email notnull" name="email" placeholder="example@mail.by"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+          <label for="phone">Телефон</label>
+          <input id="phone" type="tel" name="phone" required class="notnull"
+            placeholder="+375 (код оператора) 111-11-11" pattern="^\+?[0-9\s\-\(\)]{7,20}$">
+          <label for="country">Страна</label>
+          <select id="country" name="country">
+            <option value="by">Беларусь</option>
+            <option value="ru">Россия</option>
+            <option value="ua">Украина</option>
+            <option value="pl">Польша</option>
+            <option value="lt">Литва</option>
+            <option value="lv">Латвия</option>
+            <option value="ee">Эстония</option>
+            <option value="us">США</option>
+          </select>
+          <label for="password">Пароль</label>
+          <input id="password" type="password" name="password" placeholder="Мин. 8 символов" pattern=".{8,32}">
+          <label for="password_confirm">Подтвердите пароль</label>
+          <input id="password_confirm" type="password" name="password_confirm" placeholder="Повторите пароль"
+            pattern=".{8,32}">
+        </fieldset>
+        <fieldset class="account-action">
+          <label>
+            <input type="checkbox" name="ww_submit_confirm" checked>&nbsp;Отметьте для подтверждения согласия с <a
+              href="/подключение/правила-использования-услуги" target="_blank" rel="noopener">правилами использования
+              услуги</a>
+          </label>
+          <label>
+            <input type="checkbox" name="ww_submit_confirm" checked>&nbsp;Отметьте для согласия на обработку
+            персональных данных
+            в соответствии с <a href="/соглашение-об-обработке-персональных-данных" target="_blank"
+              rel="noopener">Соглашением об обработке персональных данных</a>
+          </label>
+          <input class="btn" type="submit" name="submit" value="Зарегистрироваться">
+        </fieldset>
+      </form>
+    </article>
+    <!--<aside>
+      Тут могла быть ваша реклама
+    </aside>-->
+  </main>
+  <footer class="foot">
+    &#169; 2026, Официальный сайт Иванова Ивана Ивановича
+  </footer>
+</body>
+
+</html>
