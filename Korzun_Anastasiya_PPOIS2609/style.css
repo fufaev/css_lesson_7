@@ -97,7 +97,7 @@ fieldset {
 .account-info {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  row-gap: 7px;
+  row-gap: 6px;
   padding-top: 35px;
   padding-left: 20px;
   padding-right: 20px;
@@ -171,7 +171,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   row-gap: 11px;
-  padding-top: 15px;
+  padding-top: 18px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 15px;
@@ -183,7 +183,7 @@ fieldset {
 .check {
   display: flex;
   align-items: flex-start;
-  column-gap: 9px;
+  column-gap: 11px;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -210,7 +210,7 @@ fieldset {
 }
 .btn {
   align-self: center;
-  margin-top: 3px;
+  margin-top: 0px;
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 20px;
@@ -240,7 +240,7 @@ fieldset {
   outline-offset: 2px;
 }
 .foot {
-  padding-top: 12px;
+  padding-top: 16px;
   padding-bottom: 24px;
   padding-left: 12px;
   padding-right: 12px;
