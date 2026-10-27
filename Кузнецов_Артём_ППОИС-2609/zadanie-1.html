@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Использование веб-форм на сайте</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+    <h1>Форма регистрации на сайте</h1>
+  </header>
+  <main>
+    <article class="c1">
+      <h2>Добро пожаловать на наш сайт!</h2>
+      <p class="form-description">Для регистрации введите свои данные:</p>
+      
+      <form action="/signup" method="POST">
+        <fieldset class="account-info">
+          <legend>Регистрационные данные</legend>
+
+          <div class="form-group">
+            <label for="first_name">Имя</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Иван" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Фамилия</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Иванов" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.by" required 
+                   pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+375 (код оператора) 111-11-11" required 
+                   pattern="\+375\s?\(?\d{2}\)?\s?\d{3}-\d{2}-\d{2}">
+          </div>
+
+          <div class="form-group">
+            <label for="country">Страна</label>
+            <select id="country" name="country">
+              <option value="Беларусь">Беларусь</option>
+              <option value="Россия">Россия</option>
+              <option value="Украина">Украина</option>
+              <option value="Польша">Польша</option>
+              <option value="Литва">Литва</option>
+              <option value="Латвия">Латвия</option>
+              <option value="Эстония">Эстония</option>
+              <option value="США">США</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Мин. 8 символов" required 
+                   pattern=".{8,}">
+          </div>
+
+          <div class="form-group">
+            <label for="password_confirm">Подтвердите пароль</label>
+            <input type="password" id="password_confirm" name="password_confirm" placeholder="Повторите пароль" required
+                   pattern=".{8,}">
+          </div>
+        </fieldset>
+
+        <fieldset class="account-action">
+          <div class="checkbox-group">
+            <input type="checkbox" id="agree_rules" name="agree_rules" checked required>
+            <label for="agree_rules">Отметьте для подтверждения согласия с <a href="/подключение/правила-использования-услуги" target="_blank" rel="noopener">правилами использования услуги</a></label>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="agree_data" name="agree_data" checked required>
+            <label for="agree_data">Отметьте для согласия на обработку персональных данных в соответствии с <a href="/соглашение-об-обработке-персональных-данных" target="_blank" rel="noopener">Соглашением об обработке персональных данных</a></label>
+          </div>
+
+          <input class="btn" type="submit" name="submit" value="Зарегистрироваться">
+        </fieldset>
+      </form>
+    </article>
+  </main>
+  <footer class="foot">
+    &#169; 2026, Официальный сайт Виталия Валентиновича
+  </footer>
+</body>
+</html>
